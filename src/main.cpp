@@ -828,7 +828,7 @@ uint256 static GetOrphanRoot(const CBlock* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 1 * COIN;
+    int64 nSubsidy = 100 * COIN;
 
 if(nHeight < 2) // no block reward within the first 3 days
         nSubsidy = 280000;
@@ -839,7 +839,7 @@ if(nHeight < 2) // no block reward within the first 3 days
 }
 
 static const int64 nTargetTimespan = 1 * 24 * 60 * 60; // HorrorCoin: 1 days
-static const int64 nTargetSpacing = 120; // HorrorCoin: 2 minute blocks
+static const int64 nTargetSpacing = 180; // HorrorCoin: 3 minute blocks
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 // Thanks: Balthazar for suggesting the following fix
